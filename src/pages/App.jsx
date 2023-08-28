@@ -2,8 +2,10 @@ import { Container, Row, Col, Form, InputGroup, Button, ButtonGroup } from 'reac
 import NavBar from '../components/NavBar'
 import Ejercicio from '../components/Ejercicio'
 import { useEffect, useRef, useState } from 'react'
+import data from '../data/data'
 
 const ListadoArticulos = () => {
+    const articulos = data;
 
     // Lista de ejercicios
     const [listaArticulos, setListaArticulos] = useState([])
@@ -11,30 +13,28 @@ const ListadoArticulos = () => {
     // Los ejercicios de la lista que se están mostrando en pantalla
     const [articulosActivos, setArticulosActivos] = useState([])
     // Filtros
-    const [dificultad, setDificultad] = useState(0)
+    const [tema, setTema] = useState(0)
     const [busqueda, setBusqueda] = useState('')
 
     const buscarInput = useRef()
 
     useEffect(() => async() => {
-        const response = await fetch('http://localhost:5000/ejercicios')
-        const data = await response.json()
-        setListaArticulos(data)
-        setEjerciciosActivos(data)
+        setListaArticulos(articulos)
+        setArticulosActivos(articulos)
     }, [])
 
     useEffect(() => { // Filtrar
         var lista = [...listaArticulos]
-        if (dificultad) lista = lista.filter(ej => ej.dificultad === dificultad)
+        if (tema) lista = lista.filter(ej => ej.tema === tema)
         if (busqueda) {
             lista = lista.filter((ej) => (
                 ej.titulo.toUpperCase().includes(buscarInput.current.value.toUpperCase())
             ))
         }
         setArticulosActivos(lista)
-    }, [busqueda, dificultad])
+    }, [busqueda, tema])
 
-    const handleClick = e => setDificultad(Number(e.target.value))
+    const handleClick = e => setTema(Number(e.target.value))
     const handleChange = e => setBusqueda(e.target.value)
 
     return (
@@ -55,17 +55,17 @@ const ListadoArticulos = () => {
                 </Row>
                 <Row>
                     <Col sm={3} className='dificultades-container'>
-                        <h4>Dificultades</h4>
+                        <h4>Problemas</h4>
                         <Button variant="primary" value={0} onClick={handleClick} className='dificulty-button'>Reset</Button>
                         <ButtonGroup aria-label="Basic example" className='dificulty-button'>
-                            <Button variant="success" value={1} onClick={handleClick}>Principiante</Button>
-                            <Button variant="warning" value={2} onClick={handleClick}>Intermedio</Button>
-                            <Button variant="danger" value={3} onClick={handleClick}>Avanzado</Button>
+                            <Button variant="success" value={1} onClick={handleClick}>Calentamiento</Button>
+                            <Button variant="warning" value={2} onClick={handleClick}>Contaminacion</Button>
+                            <Button variant="danger" value={3} onClick={handleClick}>inundaciones</Button>
                         </ButtonGroup>
                     </Col>
                     <Col sm={9} className='ejercicios-container'>
                         {articulosActivos.map((ej, key) => (
-                            <Ejercicio key={key} idEj={ej.id} titulo={ej.titulo} descripcion={ej.descripcion} dificultad={ej.dificultad} />
+                            <Ejercicio key={key} idEj={ej.id} titulo={ej.titulo} descripcion={ej.descripcion} tema={ej.tema} />
                         ))}
                     </Col>
                 </Row>

@@ -1,0 +1,15 @@
+.navbar-container{
+    position: sticky;
+    background-color: #00FF00 !important;
+    width: 100vw;
+    font-size: 20px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.logo {
+    height: 3rem;
+}
