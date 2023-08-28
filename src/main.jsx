@@ -5,11 +5,11 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import App from './App'
+import ListadoArticulos from './pages/App'
 
 const routes = createBrowserRouter([{
   path: '/',
-  element: <App/>
+  element: <ListadoArticulos/>
 }
 ])
 

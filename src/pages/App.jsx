@@ -1,5 +1,4 @@
 import { Container, Row, Col, Form, InputGroup, Button, ButtonGroup } from 'react-bootstrap'
-import './ListadoEjercicios.css'
 import NavBar from '../components/NavBar'
 import Ejercicio from '../components/Ejercicio'
 import { useEffect, useRef, useState } from 'react'
