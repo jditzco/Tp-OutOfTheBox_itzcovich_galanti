@@ -44,6 +44,7 @@ const ListadoArticulos = () => {
                 <Row>
                     <Col sm={3}></Col>
                     <Col sm={9}>
+                        <br/>
                         <InputGroup className="mb-3">
                             <Form.Control placeholder="Buscar..."
                                 value={busqueda}
