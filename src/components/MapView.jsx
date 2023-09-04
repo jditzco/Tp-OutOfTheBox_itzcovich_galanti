@@ -1,22 +1,25 @@
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import Card from 'react-bootstrap/Card'
+import NavBar from '../components/NavBar';
+
 function Mapa() {
-    return (
-      <MapContainer
-        center={[51.505, -0.09]} // Coordenadas iniciales del mapa (latitud, longitud)
-        zoom={13} // Nivel de zoom inicial
-        style={{ height: '400px', width: '100%' }} // Estilo del mapa
-      >
-        <TileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" // URL del mapa base (puedes usar otros proveedores)
-        />
-        <Marker position={[51.505, -0.09]}> {/* Coordenadas del marcador (latitud, longitud) */}
-          <Popup>
-            Ejemplo de marcador en React-Leaflet.
-          </Popup>
-        </Marker>
-      </MapContainer>
-    );
-  }
-  
-  export default Mapa;
-  
+  return (
+    
+    <div >
+      <Card className="bg-dark text-white" style={{ width: '70%', margin:'5% 15%'}}>
+        <MapContainer style={{ height: "600px" }} center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <Marker position={[51.505, -0.09]}>
+            <Popup>
+              A pretty CSS3 popup. <br /> Easily customizable.
+            </Popup>
+          </Marker>
+        </MapContainer>
+      </Card>
+    </div>
+  );
+}
+export default Mapa;
