@@ -1,10 +1,7 @@
 import React from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import Mapa from '../components/MapView';
 
-import React from 'react';
-import Mapa from './Mapa';
-
-function App() {
+function Map() {
   return (
     <div className="App">
       <h1>Mapa en React</h1>
@@ -13,6 +10,6 @@ function App() {
   );
 }
 
-export default App;
+export default Map;
 
   
