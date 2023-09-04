@@ -24,6 +24,7 @@ createRoot(document.getElementById('root')).render(
       <Routes>
         <Route index path='/' element={<ListadoArticulos />}></Route>
         <Route index path='/Articulo/:articuloId' element={<Articulo />}></Route>
+        <Route index path='/map' element={<Map/>}></Route>
       </Routes>
     </BrowserRouter>
   </StrictMode>,
