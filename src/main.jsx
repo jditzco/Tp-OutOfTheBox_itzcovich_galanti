@@ -7,6 +7,7 @@ import './index.css'
 import { RouterProvider, createBrowserRouter, BrowserRouter, Route, Routes } from 'react-router-dom'
 import ListadoArticulos from './pages/App'
 import Articulo from './pages/Articulo'
+import Map from './pages/map'
 
 // const routes = createBrowserRouter([{
 //   path: '/',
