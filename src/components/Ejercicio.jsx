@@ -1,7 +1,7 @@
 import { Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-function Ejercicio({ titulo, descripcion, dificultad }) {
+function Ejercicio({ titulo, descripcion, dificultad, idEj }) {
   return (
     <Card>
       <Card.Body>
@@ -10,7 +10,7 @@ function Ejercicio({ titulo, descripcion, dificultad }) {
           {descripcion}<br />
           Dificultad: {dificultad}
         </Card.Text>
-        <Button variant="success"><Link to={'/Articulo'} className='link'>Ingresar</Link></Button>
+        <Button variant="success"><Link to={`/Articulo/${idEj}`} className='link'>Ingresar</Link></Button>
       </Card.Body>
     </Card>
   );
