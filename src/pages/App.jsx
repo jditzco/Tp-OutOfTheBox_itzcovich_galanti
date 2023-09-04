@@ -5,8 +5,6 @@ import { useEffect, useRef, useState } from 'react'
 import data from '../data/data'
 
 const ListadoArticulos = () => {
-    const articulos = data;
-
     // Lista de ejercicios
     const [listaArticulos, setListaArticulos] = useState([])
 
@@ -14,13 +12,15 @@ const ListadoArticulos = () => {
     const [articulosActivos, setArticulosActivos] = useState([])
     // Filtros
     const [tema, setTema] = useState(0)
-    const [busqueda, setBusqueda] = useState('')
+    const [busqueda, setBusqueda] = useState(null)
 
     const buscarInput = useRef()
 
     useEffect(() => async() => {
-        setListaArticulos(articulos)
-        setArticulosActivos(articulos)
+        console.log(data)
+        setListaArticulos(data)
+        setArticulosActivos(data)
+        setBusqueda('')
     }, [])
 
     useEffect(() => { // Filtrar
@@ -44,6 +44,7 @@ const ListadoArticulos = () => {
                 <Row>
                     <Col sm={3}></Col>
                     <Col sm={9}>
+                        <br/>
                         <InputGroup className="mb-3">
                             <Form.Control placeholder="Buscar..."
                                 value={busqueda}

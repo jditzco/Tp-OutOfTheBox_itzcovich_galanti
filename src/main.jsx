@@ -6,10 +6,14 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import ListadoArticulos from './pages/App'
+import Articulo from './pages/Articulo'
 
 const routes = createBrowserRouter([{
   path: '/',
   element: <ListadoArticulos/>
+},{
+  path: '/Articulo',
+  element: <Articulo/>
 }
 ])
 

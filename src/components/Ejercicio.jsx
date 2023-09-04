@@ -10,7 +10,7 @@ function Ejercicio({ titulo, descripcion, dificultad }) {
           {descripcion}<br />
           Dificultad: {dificultad}
         </Card.Text>
-        <Button variant="success"><Link to={'/ejercicio'} className='link'>Ingresar</Link></Button>
+        <Button variant="success"><Link to={'/Articulo'} className='link'>Ingresar</Link></Button>
       </Card.Body>
     </Card>
   );
