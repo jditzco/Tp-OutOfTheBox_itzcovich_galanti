@@ -1,6 +1,6 @@
 import { Container, Row, Col, Form, InputGroup, Button, ButtonGroup } from 'react-bootstrap'
 import NavBar from '../components/NavBar'
-import Ejercicio from '../components/Ejercicio'
+import Ejercicio from '../components/Card'
 import { useEffect, useRef, useState } from 'react'
 import data from '../data/data'
 

@@ -1,6 +1,5 @@
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import Card from 'react-bootstrap/Card'
-import NavBar from '../components/NavBar';
 
 function Mapa() {
   return (
