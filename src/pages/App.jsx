@@ -3,6 +3,7 @@ import NavBar from '../components/NavBar'
 import Ejercicio from '../components/Card'
 import { useEffect, useRef, useState } from 'react'
 import data from '../data/data'
+import './App.css'
 
 const ListadoArticulos = () => {
     // Lista de ejercicios

@@ -12,12 +12,16 @@ import Map from './pages/map'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <div style={{ 
+      backgroundImage: `url("https://giphy.com/clips/storyful-shark-week-mwWeYaKXNQvfO2kR5a")` }}>
+      <BrowserRouter>
       <Routes>
         <Route index path='/listadoArticulos' element={<ListadoArticulos />}></Route>
         <Route index path='/Articulo/:articuloId' element={<Articulo />}></Route>
         <Route index path='/' element={<Map/>}></Route>
       </Routes>
     </BrowserRouter>
+    </div>
+    
   </StrictMode>,
 ) 
