@@ -6,7 +6,7 @@ const data = [
         //https://www.argentina.gob.ar/ambiente/cambio-climatico/que-es-el-cambio-climatico
         tema: 1,
         imagen: 'https://www.argentina.gob.ar/sites/default/files/pollution-2408234.jpg',
-        texto:'',
+        texto:"El cambio climático se refiere a una variación significativa en los componentes del clima cuando se comparan períodos prolongados, pudiendo ser décadas o más. Por ejemplo, la temperatura media de la década del 50 con respecto a la temperatura media de la década del 90. El clima de la Tierra ha variado muchas veces a lo largo de su historia debido a cambios naturales, como las erupciones volcánicas, los cambios en la órbita de traslación de la tierra, las variaciones en la composición de la atmósfera, entre otros. Pero, desde los últimos años del siglo XIX, la temperatura media de la superficie terrestre ha aumentado más de 0,6 ºC. Este aumento está vinculado al proceso de industrialización iniciado hace más de un siglo y, en particular, a la combustión de cantidades cada vez mayores de petróleo y carbón, la tala de bosques y algunos métodos de explotación agrícola. Un informe del Panel Intergubernamental de Cambio Climático (IPCC) afirma que “el calentamiento desde los niveles preindustriales hasta la década 2006-2015 se estima en 0,87 °C” (IPCC, 2018:51).",
     },{
         id: 2,
         titulo: 'Tipos de contaminación',

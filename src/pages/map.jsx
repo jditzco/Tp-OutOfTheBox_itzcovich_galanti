@@ -4,11 +4,14 @@ import NavBar from '../components/NavBar';
 
 function Map() {
   return (
-    <div className="App">
+    <>
+      <div className="App">
       <NavBar/>
       <Mapa />
       
     </div>
+    </>
+  
   );
 }
 

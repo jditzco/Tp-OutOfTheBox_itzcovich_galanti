@@ -14,10 +14,10 @@ function Articulo() {
       <div className='row'>
         <div className='mitad'>
 
-          <Card className='articulos' style={{ width: '50rem' }}>
+          <Card className='articulos' style={{ width: '40rem' }}>
             <Card.Body>
               <Card.Title>{ejercicio.titulo}</Card.Title>
-              <Card.Subtitle className="mb-2 text-muted">{ejercicio.descripcion}</Card.Subtitle>
+              <Card.Subtitle className="mb-2 text-muted">{ejercicio.texto}</Card.Subtitle>
               <Card.Text>
                 {`ID: ${ejercicio.id}`}
     
@@ -28,7 +28,7 @@ function Articulo() {
 
         </div>
         <div className='mitad'>
-          <Card style={{ width: '40rem'}}>
+          <Card style={{ width: '39rem'}}>
             <Card.Img variant="top" src={ejercicio.imagen} />
           </Card>
         </div>
