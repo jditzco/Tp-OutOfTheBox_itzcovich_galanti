@@ -1,5 +1,4 @@
 import { Container, Row, Col, Form, InputGroup, Button, ButtonGroup } from 'react-bootstrap'
-import NavBar from '../components/NavBar'
 import Ejercicio from '../components/Card'
 import { useEffect, useRef, useState } from 'react'
 import data from '../data/data'
@@ -40,7 +39,6 @@ const ListadoArticulos = () => {
 
     return (
         <>
-            <NavBar />
             <Container fluid className='app-container'>
                 <Row>
                     <Col sm={3}></Col>

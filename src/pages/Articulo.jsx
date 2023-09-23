@@ -1,6 +1,5 @@
 import './Articulo.css';
 import Card from 'react-bootstrap/Card'
-import NavBar from '../components/NavBar';
 import { useParams } from 'react-router';
 import { useState } from 'react';
 import data from '../data/data';
@@ -10,7 +9,6 @@ function Articulo() {
 
   return (
     <>
-      <NavBar />
       <div className='row'>
         <div className='mitad'>
 
